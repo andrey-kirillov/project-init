@@ -21,7 +21,7 @@ export default [
     ],
   },
   {
-    files: ["src/**/*.{js,mjs,cjs,ts,jsx,tsx}", "!src/stories/**"],
+    files: ["src/**/*.{js,mjs,cjs,ts,jsx,tsx}"],
   },
   {
     languageOptions: {
