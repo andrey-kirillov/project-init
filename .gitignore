@@ -24,3 +24,5 @@ yarn-error.log*
 reactDebug.log.json
 logLevels.json
 a24Config.json
+
+*storybook.log

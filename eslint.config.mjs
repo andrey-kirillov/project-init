@@ -7,20 +7,21 @@ import pluginReactHooks from "eslint-plugin-react-hooks";
 /** @type {import('eslint').Linter.Config[]} */
 export default [
   {
-    files: ["./**/*.{js,mjs,cjs,ts,jsx,tsx}"],
+    ignores: [
+      "**/*.mdx",
+      '**/*.md',
+      '**/*.json',
+      '**/*.png',
+      '**/*.jpeg',
+      '**/*.jpg',
+      '**/*.gif',
+      '**/*.wbmp',
+      '**/*.svg',
+      'node_modules',
+    ],
   },
   {
-    ignores: [
-      "./**/*.mdx",
-      './**/*.md',
-      './**/*.json',
-      './**/*.png',
-      './**/*.jpeg',
-      './**/*.jpg',
-      './**/*.gif',
-      './**/*.wbmp',
-      './**/*.svg',
-    ],
+    files: ["src/**/*.{js,mjs,cjs,ts,jsx,tsx}", "!src/stories/**"],
   },
   {
     languageOptions: {
@@ -64,6 +65,7 @@ export default [
       "curly": ["error", "multi-or-nest"],
       "react-hooks/exhaustive-deps": "warn",
       "no-multiple-empty-lines": ["error", { "max": 1 }],
+      "react/no-unescaped-entities": 0,
     },
   },
 ];
